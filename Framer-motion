@@ -1,0 +1,37 @@
+[Framer Motion]
+
+React용 production-ready 모션 라이브러리 (오픈 소스)
+
+https://www.framer.com/motion
+https://github.com/framer/motion
+
+npx create-react-app animation-practice --template typescript
+npm install framer-motion
+
+[Animation]
+
+Framer Motion의 애니메이션은 모션 컴포넌트의 유연한 animate 속성을 통해 제어됩니다. 간단한 애니메이션의 경우 animate props에서 직접 값을 설정할 수 있습니다.
+ex) motion.div animate={{ rotate: 360 }} transition={{ duration: 2 }}
+https://www.framer.com/docs/animation
+
+initial: boolean | Target | VariantLabels (애니메이션의 초기값 지정)
+속성, 변형 레이블 또는 시작할 변형 레이블의 배열입니다.
+animate의 값으로 초기화하려면 false로 설정합니다(마운트 애니메이션 비활성화).
+https://www.framer.com/docs/component/###initial
+
+[Transition]
+
+Transition은 값이 한 상태에서 다른 상태로 움직이는 방식을 정의합니다.
+또한 Tween, Spring 또는 Inertia를 사용할 애니메이션 유형을 정의하는 소품을 허용할 수 있습니다.
+ex) motion.div animate={{ rotate: 180 }} transition={{ type: 'spring' }}
+https://www.framer.com/docs/transition
+
+<motion.tagname > 으로 사용하며 initial, animate 등의 property 를 사용
+
+[dragConstraints]
+
+허용된 드래그 가능 영역에 제약 조건을 적용합니다.
+dragConstraints 에는 드래그 가능한 컴포넌트의 가장자리 거리를 정의합니다. (드래그 가능한 영역에 가장자리에서 얼마만큼까지 허용할 것인지 지정)
+특정 컴포넌트의 ref 를 이용해 범위를 지정할 수 있다. 아니면 top, bottom, left, right 등을 사용할 수 있다. x,y 축도 사용가능
+
+https://www.framer.com/motion/use-motion-value-event
